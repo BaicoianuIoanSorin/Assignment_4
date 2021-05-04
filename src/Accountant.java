@@ -1,2 +1,2 @@
-public class Accountant {
+public class Accountant { //singleton
 }
