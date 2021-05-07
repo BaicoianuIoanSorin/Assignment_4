@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="MyCollection-1.1" level="application" />
+    <orderEntry type="library" name="MyArrayList-0.1" level="application" />
   </component>
 </module>

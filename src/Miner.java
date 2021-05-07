@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import static java.lang.Thread.sleep;
 
 public class Miner implements Runnable { //singleton
