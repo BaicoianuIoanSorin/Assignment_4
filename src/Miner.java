@@ -12,6 +12,7 @@ public class Miner implements Runnable { //singleton
             this.mine = mine;
             this.deposit = deposit;
         }
+
         public void run()
         {
             while(true)

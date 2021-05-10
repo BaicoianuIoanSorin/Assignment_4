@@ -1,6 +1,6 @@
 public interface TreasureRoomDoor {
     TreasuryRead acquireRead();
     void releaseRead();
-    TreasuryRead acquireWrite();
+    TreasuryWrite acquireWrite();
     void releaseWrite();
 }

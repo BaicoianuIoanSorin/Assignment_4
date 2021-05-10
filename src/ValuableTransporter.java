@@ -1,11 +1,15 @@
+import utility.collection.ArrayList;
+
 import static java.lang.Thread.sleep;
 
 public class ValuableTransporter implements Runnable{ //singleton
 
     private Deposit deposit;
+    private TreasureRoom treasureRoom;
 
-    public ValuableTransporter(Deposit deposit){
+    public ValuableTransporter(Deposit deposit, TreasureRoom treasureRoom){
         this.deposit = deposit;
+        this.treasureRoom = treasureRoom;
     }
 
 
@@ -13,7 +17,11 @@ public class ValuableTransporter implements Runnable{ //singleton
     @Override
     public void run() {
         while (true){
-            deposit.take();
+            ArrayList<Valuable> valuables = deposit.take();
+            for(int i = 0; i < valuables.size(); i++)
+            {
+                treasureRoom.put(valuables.get(i));
+            }
             try {
                 spendSomeTime("Delivering goods");
             }

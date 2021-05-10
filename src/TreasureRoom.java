@@ -1,10 +1,11 @@
 import utility.collection.ArrayList;
 
-public class TreasureRoom implements TreasuryRead {
+public class TreasureRoom implements TreasuryWrite {
     private ArrayList<Valuable> valuables;
 
     public TreasureRoom()
     {
+
         valuables = new ArrayList<>();
     }
 
@@ -14,14 +15,12 @@ public class TreasureRoom implements TreasuryRead {
     }
 
     @Override
-    public synchronized Valuable take() {
-        Valuable removedValuable = valuables.get(0);
-        valuables.remove(0);
-        return removedValuable;
+    public Valuable take() {
+        return valuables.remove(0);
     }
 
     @Override
-    public synchronized void put(Valuable valuable) {
+    public void put(Valuable valuable) {
         valuables.add(valuable);
     }
 }
