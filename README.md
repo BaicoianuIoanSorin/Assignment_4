@@ -1,7 +1,7 @@
 # Assignment_4
 Assignment_4 : A Kingdom simulation shown
 
-##What requirements had to have: 
+## What requirements had to have: 
 1. Threads to simulate the actors: King, Accountant, ValuableTransporter and ValuablesMiner
 2. Singleton to log any action, e.g. when an actor waits or perform a job.
 3. Multiton for different types of Valuables.
